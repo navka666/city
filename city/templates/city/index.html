@@ -164,7 +164,7 @@ var labelsContainers = chart.selectAll("g.label")
     .append("g")
     .attr("class", "label")
     .attr("transform", function (d) {
-        var lInitialX = xScale(d.label);
+        var lInitialX = xScale(d.id);
         var lX = lInitialX + xScale.rangeBand() / 2;
         var lY = yScale(d.data);
         return "translate(" + lX + ", " + lY + ")";
